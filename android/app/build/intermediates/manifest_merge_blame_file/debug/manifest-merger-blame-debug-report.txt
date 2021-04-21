@@ -1,0 +1,80 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.testproject"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="29" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/edz/Documents/TestProject 3 2/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/edz/Documents/TestProject 3 2/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:5:5-75
+13-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:5:22-72
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:4:5-67
+14-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:4:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:7:5-79
+15-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:7:22-76
+16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+16-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:8:5-76
+16-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:8:22-73
+17    <uses-permission android:name="android.permission.READ_LOGS" />
+17-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:9:5-68
+17-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:9:22-65
+18
+19    <application
+19-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:11:5-29:19
+20        android:name="com.testproject.MainApplication"
+20-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:12:7-38
+21        android:allowBackup="false"
+21-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:16:7-34
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] /Users/edz/.gradle/caches/transforms-2/files-2.1/d67cd79abd1ca209502f51c69d23182b/core-1.1.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:14:7-41
+25        android:label="@string/app_name"
+25-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:13:7-39
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:15:7-52
+27        android:theme="@style/AppTheme"
+27-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:17:7-38
+28        android:usesCleartextTraffic="true" >
+28-->/Users/edz/Documents/TestProject 3 2/android/app/src/debug/AndroidManifest.xml:8:9-44
+29        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+29-->/Users/edz/Documents/TestProject 3 2/android/app/src/debug/AndroidManifest.xml:11:9-86
+29-->/Users/edz/Documents/TestProject 3 2/android/app/src/debug/AndroidManifest.xml:11:19-83
+30        <activity
+30-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:18:7-28:18
+31            android:name="com.testproject.MainActivity"
+31-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:19:9-37
+32            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+32-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:21:9-86
+33            android:label="@string/app_name"
+33-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:20:9-41
+34            android:launchMode="singleTask"
+34-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:22:9-40
+35            android:windowSoftInputMode="adjustResize" >
+35-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:23:9-51
+36            <intent-filter>
+36-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:24:9-27:25
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:25:13-65
+37-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:25:21-62
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:26:13-73
+39-->/Users/edz/Documents/TestProject 3 2/android/app/src/main/AndroidManifest.xml:26:23-70
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest>

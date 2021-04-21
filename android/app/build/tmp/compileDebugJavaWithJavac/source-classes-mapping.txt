@@ -1,0 +1,18 @@
+com/testproject/Bugly/SimpleBugly.java
+ com.testproject.Bugly.SimpleBugly
+com/testproject/Bugly/SimpleBuglyPackage.java
+ com.testproject.Bugly.SimpleBuglyPackage
+com/testproject/MainActivity.java
+ com.testproject.MainActivity
+com/testproject/BuildConfig.java
+ com.testproject.BuildConfig
+com/testproject/ReactNativeFlipper.java
+ com.testproject.ReactNativeFlipper
+ com.testproject.ReactNativeFlipper$1
+ com.testproject.ReactNativeFlipper$2
+ com.testproject.ReactNativeFlipper$2$1
+com/testproject/MainApplication.java
+ com.testproject.MainApplication
+ com.testproject.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
