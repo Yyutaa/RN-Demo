@@ -2,15 +2,21 @@ package com.testproject;
 
 import android.app.Application;
 import android.content.Context;
+import android.view.ViewManager;
+
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
+import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.soloader.SoLoader;
 import com.testproject.Bugly.SimpleBuglyPackage;
+import com.testproject.View.ReactViewPackage;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -29,6 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
 //           packages.add(new MyReactNativePackage());
            packages.add(new SimpleBuglyPackage());
+           packages.add(new ReactViewPackage());
           return packages;
         }
 

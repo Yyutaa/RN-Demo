@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 13:58:49
- * @LastEditTime: 2021-04-21 18:46:03
+ * @LastEditTime: 2021-04-23 14:40:35
  * @LastEditors: yuta
  */
 /**
@@ -46,7 +46,6 @@ const App = () => {
         <RootStack.Navigator initialRouteName="Login">
           <RootStack.Screen
             name="Login"
-            // options={{headerTitle: ''}}
             options={{
               headerShown: false,
             }}

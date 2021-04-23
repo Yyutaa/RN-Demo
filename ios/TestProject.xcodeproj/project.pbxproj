@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		00C67BC4263016A300CFEC4A /* SimpleBugly.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C67BC3263016A300CFEC4A /* SimpleBugly.m */; };
 		00C67BCA2630195000CFEC4A /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C67BC92630195000CFEC4A /* Bugly.framework */; };
+		00C67BE62631631E00CFEC4A /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C67BE52631631E00CFEC4A /* TestView.m */; };
+		00C67C012631645E00CFEC4A /* CustomViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C67C002631645E00CFEC4A /* CustomViewManager.m */; };
 		00E356F31AD99517003FC87E /* TestProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TestProjectTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -31,6 +33,10 @@
 /* Begin PBXFileReference section */
 		00C67BC3263016A300CFEC4A /* SimpleBugly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleBugly.m; sourceTree = "<group>"; };
 		00C67BC92630195000CFEC4A /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		00C67BE4263162FE00CFEC4A /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		00C67BE52631631E00CFEC4A /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		00C67BFF2631645E00CFEC4A /* CustomViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewManager.h; sourceTree = "<group>"; };
+		00C67C002631645E00CFEC4A /* CustomViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewManager.m; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* TestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TestProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestProjectTests.m; sourceTree = "<group>"; };
@@ -77,6 +83,17 @@
 				00C67BC3263016A300CFEC4A /* SimpleBugly.m */,
 			);
 			path = RN;
+			sourceTree = "<group>";
+		};
+		00C67BE3263162E600CFEC4A /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				00C67BE4263162FE00CFEC4A /* TestView.h */,
+				00C67BE52631631E00CFEC4A /* TestView.m */,
+				00C67BFF2631645E00CFEC4A /* CustomViewManager.h */,
+				00C67C002631645E00CFEC4A /* CustomViewManager.m */,
+			);
+			path = TestView;
 			sourceTree = "<group>";
 		};
 		00E356EF1AD99517003FC87E /* TestProjectTests */ = {
@@ -140,6 +157,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				00C67BE3263162E600CFEC4A /* TestView */,
 				00C67BC92630195000CFEC4A /* Bugly.framework */,
 				00C67BB62630164500CFEC4A /* RN */,
 				13B07FAE1A68108700A75B9A /* TestProject */,
@@ -219,6 +237,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 1240;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -427,7 +446,9 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				00C67BE62631631E00CFEC4A /* TestView.m in Sources */,
 				00C67BC4263016A300CFEC4A /* SimpleBugly.m in Sources */,
+				00C67C012631645E00CFEC4A /* CustomViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +468,7 @@
 			baseConfigurationReference = EF3C0BBD64EF390E40052C51 /* Pods-TestProject-TestProjectTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -465,6 +487,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProject.app/TestProject";
 			};
 			name = Debug;
@@ -474,6 +498,7 @@
 			baseConfigurationReference = 981749564747984680808F7B /* Pods-TestProject-TestProjectTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = TestProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -489,6 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProject.app/TestProject";
 			};
 			name = Release;

@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:28:38
- * @LastEditTime: 2021-04-21 18:38:24
+ * @LastEditTime: 2021-04-23 14:38:07
  * @LastEditors: yuta
  */
 import * as React from 'react';
@@ -29,9 +29,7 @@ function SettingsScreen({navigation}) {
   const [, setLocale] = useRecoilState(localeState)
 
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings screen</Text>
-
+    <View style={{flex: 1, justifyContent: 'space-around', alignItems: 'center'}}>
       <Button
         title={Locales.t('Set language')}
         onPress={() => setVisible(true)}

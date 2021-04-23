@@ -1,25 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/edz/Documents/TestProject 3 2/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/edz/RN-Demo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/edz/Documents/TestProject 3 2/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/edz/RN-Demo/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "234"
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "156,262",
+                        "endColumns": "63,68",
+                        "endOffsets": "215,326"
                     },
                     "to": {
-                        "startLines": "801",
-                        "startColumns": "4",
-                        "startOffsets": "58479",
-                        "endLines": "804",
-                        "endColumns": "12",
-                        "endOffsets": "58659"
+                        "startLines": "635,636",
+                        "startColumns": "4,4",
+                        "startOffsets": "40488,40552",
+                        "endColumns": "63,68",
+                        "endOffsets": "40547,40616"
                     }
                 },
                 {
@@ -42,6 +40,23 @@
                     }
                 },
                 {
+                    "source": "/Users/edz/RN-Demo/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "48",
+                        "endOffsets": "60"
+                    },
+                    "to": {
+                        "startLines": "671",
+                        "startColumns": "4",
+                        "startOffsets": "43007",
+                        "endColumns": "48",
+                        "endOffsets": "43051"
+                    }
+                },
+                {
                     "source": "/Users/edz/.gradle/caches/transforms-2/files-2.1/dcc76cd07ebcaa6166d73d461b1667fa/cardview-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -58,23 +73,6 @@
                         "endLines": "8,107,108,109,110,280,281,282,832,2639,2642,2645,5315",
                         "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
                         "endOffsets": "515,6574,6636,6698,6762,18250,18307,18361,60524,177916,178042,178170,346187"
-                    }
-                },
-                {
-                    "source": "/Users/edz/Documents/TestProject 3 2/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
-                    "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "156,262",
-                        "endColumns": "63,68",
-                        "endOffsets": "215,326"
-                    },
-                    "to": {
-                        "startLines": "635,636",
-                        "startColumns": "4,4",
-                        "startOffsets": "40488,40552",
-                        "endColumns": "63,68",
-                        "endOffsets": "40547,40616"
                     }
                 },
                 {
@@ -135,23 +133,6 @@
                     }
                 },
                 {
-                    "source": "/Users/edz/Documents/TestProject 3 2/android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "48",
-                        "endOffsets": "60"
-                    },
-                    "to": {
-                        "startLines": "671",
-                        "startColumns": "4",
-                        "startOffsets": "43007",
-                        "endColumns": "48",
-                        "endOffsets": "43051"
-                    }
-                },
-                {
                     "source": "/Users/edz/.gradle/caches/transforms-2/files-2.1/803d31b2df2f8d968e6cb7c3ffa37ef9/jetified-viewpager2-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -204,6 +185,25 @@
                         "endLines": "4506,4513,4524,6771,6776",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "301863,302248,302845,421338,421608"
+                    }
+                },
+                {
+                    "source": "/Users/edz/RN-Demo/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "234"
+                    },
+                    "to": {
+                        "startLines": "801",
+                        "startColumns": "4",
+                        "startOffsets": "58479",
+                        "endLines": "804",
+                        "endColumns": "12",
+                        "endOffsets": "58659"
                     }
                 },
                 {

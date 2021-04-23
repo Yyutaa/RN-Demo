@@ -1,10 +1,10 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-19 11:58:11
- * @LastEditTime: 2021-04-19 16:27:51
+ * @LastEditTime: 2021-04-23 14:13:55
  * @LastEditors: yuta
  */
-import { atom, selector } from 'recoil'
+import { atom } from 'recoil'
 
 export const accountState = atom({
   key: 'accountState',
@@ -19,12 +19,3 @@ export const localeState = atom({
   key: 'localeState',
   default: '',
 })
-
-const charCountState = selector({
-  key: 'setAccount',
-  get: ({get}) => {
-    const text = get(accountState);
-
-    return text;
-  },
-});

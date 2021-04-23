@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-19 15:57:44
- * @LastEditTime: 2021-04-19 20:01:28
+ * @LastEditTime: 2021-04-23 14:12:10
  * @LastEditors: yuta
  */
 import _ from 'lodash';
@@ -42,7 +42,6 @@ export default {
   },
 
   t(lineMapper: string) {
-    // If it is an array, translate each element.
     if (_.isArray(lineMapper)) {
       return lineMapper.map((line: any) => this.t(line));
     } else if (_.isString(lineMapper)) {
