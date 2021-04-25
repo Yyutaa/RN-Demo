@@ -1,7 +1,13 @@
 /*
  * @Author: yuta
+ * @Date: 2021-04-25 16:51:31
+ * @LastEditTime: 2021-04-25 18:06:16
+ * @LastEditors: yuta
+ */
+/*
+ * @Author: yuta
  * @Date: 2021-04-17 13:58:49
- * @LastEditTime: 2021-04-23 14:40:35
+ * @LastEditTime: 2021-04-25 16:45:06
  * @LastEditors: yuta
  */
 /**
@@ -12,17 +18,19 @@
  * @flow strict-local
  */
 
-import * as React from 'react';
-import 'react-native-gesture-handler';
-import {RecoilRoot} from 'recoil';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from './src/pages/HomeScreen';
-import SettingScreen from './src/pages/SettingScreen';
-import LoginScreen from './src/pages/LoginScreen';
-import SimpleBugly from './src/native/SimpleBugly';
-
+import * as React from "react";
+import "react-native-gesture-handler";
+import { RecoilRoot, useRecoilState } from "recoil";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import HomeScreen from "./src/pages/HomeScreen";
+import SettingScreen from "./src/pages/SettingScreen";
+import LoginScreen from "./src/pages/LoginScreen";
+// import SimpleBugly from "./native/SimpleBugly.js";
+import dataStorage from "./src/misc/data-storage";
+import { localeState } from "./src/recoil";
+//TODO:路由拆分
 const MainScreen = () => {
   return (
     <Tab.Navigator>
@@ -36,14 +44,22 @@ const RootStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+  // const [, setLocale] = useRecoilState(localeState);
+
   React.useEffect(() => {
-    SimpleBugly.testCrash();
+    // SimpleBugly.testCrash();
+    // Init language
+    //  setLocale(async () => {
+    //    await dataStorage.getLanguage();
+    //  })
   }, []);
 
   return (
     <RecoilRoot>
       <NavigationContainer>
-        <RootStack.Navigator initialRouteName="Login">
+        <RootStack.Navigator
+          initialRouteName={dataStorage.hasCredential() ? "Main" : "Login"}
+        >
           <RootStack.Screen
             name="Login"
             options={{

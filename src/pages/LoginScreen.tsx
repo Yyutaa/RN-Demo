@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:54:42
- * @LastEditTime: 2021-04-22 11:45:17
+ * @LastEditTime: 2021-04-25 15:53:12
  * @LastEditors: yuta
  */
 import React, { useRef } from "react";
@@ -18,11 +18,17 @@ import { default as ReactNativeCheckBox } from "react-native-check-box";
 import { useRecoilState } from "recoil";
 import { accountState } from "../recoil";
 import Locales from "../misc/locales";
+import dataStorage from "../misc/data-storage";
 
 const LoginScreen: React.FC = ({ navigation }) => {
   const [account, setAccount] = useRecoilState(accountState);
-  const inputPhoneRef = useRef<HTMLElement | null>(null);
+  const inputPhoneRef = useRef<TextInput>(null);
   const inputPasswordRef = useRef<HTMLElement | null>(null);
+
+  const _onLogin = async () => {
+    await dataStorage.saveCredential(account, "123456");
+    navigation.navigate("Main");
+  };
 
   return (
     <KeyboardAwareScrollView
@@ -95,12 +101,12 @@ const LoginScreen: React.FC = ({ navigation }) => {
       </View>
 
       <View
-        style={{width: '60%', justifyContent: "center", alignSelf: "center" }}
+        style={{ width: "60%", justifyContent: "center", alignSelf: "center" }}
       >
         <Button
           disabled={!account.username || !account.pwd}
           title={Locales.t("login")}
-          onPress={() => navigation.navigate("Main")}
+          onPress={() => _onLogin()}
         />
       </View>
     </KeyboardAwareScrollView>

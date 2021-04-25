@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:27:47
- * @LastEditTime: 2021-04-23 11:50:55
+ * @LastEditTime: 2021-04-25 16:02:35
  * @LastEditors: yuta
  */
 import * as React from "react";
@@ -16,11 +16,12 @@ function HomeScreen() {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      {/* TODO:文案变量优化 */}
       <Text style={{ marginVertical: 24 }}>
-        你好{account.username}, 欢迎来到这里
+        你好{account.username ?? "--"}, 欢迎来到这里
       </Text>
 
-      <Button title="启用Bugly" onPress={() => SimpleBugly.init()} />
+      <Button title="启用Bugly" onPress={() => SimpleBugly?.init()} />
 
       <RNTCustomView
         style={{

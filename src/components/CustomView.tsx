@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-22 17:30:02
- * @LastEditTime: 2021-04-23 14:11:04
+ * @LastEditTime: 2021-04-25 17:51:16
  * @LastEditors: yuta
  */
 import React from "react";
@@ -23,7 +23,9 @@ class RNTCustomView extends React.Component {
     super(props);
   }
 
-  _onClick = (event: { nativeEvent: { message: any; }; }) => {
+  //TODO:事件流程完善
+  _onClick = (event: { nativeEvent: { message: any } }) => {
+    //TODO:加入typeof判断
     if (!this.props.onClick) {
       return;
     }
@@ -32,9 +34,7 @@ class RNTCustomView extends React.Component {
   };
 
   render() {
-    return (
-      <RNTCustomViewComponent {...this.props} onClick={this._onClick} />
-    );
+    return <RNTCustomViewComponent {...this.props} onClick={this._onClick} />;
   }
 }
 
