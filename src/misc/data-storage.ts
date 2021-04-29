@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-25 15:03:22
- * @LastEditTime: 2021-04-25 16:19:38
+ * @LastEditTime: 2021-04-29 10:12:39
  * @LastEditors: yuta
  */
 import AsyncStorage from "@react-native-community/async-storage";
@@ -23,31 +23,29 @@ export default {
   },
 
   async saveLanguage(language: string) {
-    await AsyncStorage.multiSet([
-      ['language', language],
-    ]);
+    await AsyncStorage.multiSet([["language", language]]);
 
     lastLanguage = language;
   },
 
   async clearCredential() {
-    await AsyncStorage.multiRemove(["token"]);
+    await AsyncStorage.multiRemove(["token", "account"]);
   },
 
   async hasCredential() {
-    await AsyncStorage.getItem("token");
+    return await AsyncStorage.getItem("token");
   },
 
   async getLanguage() {
-    await AsyncStorage.getItem("language").then(language => {
-      lastLanguage = language
-    })
+    await AsyncStorage.getItem("language").then((language) => {
+      lastLanguage = language;
+    });
 
     return lastLanguage;
   },
-  
 
   async getAccount() {
-    await AsyncStorage.getItem("account");
+    const account = await AsyncStorage.getItem("account");
+    return account ? JSON.parse(account) : {};
   },
 };

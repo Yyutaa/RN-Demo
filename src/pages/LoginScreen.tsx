@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:54:42
- * @LastEditTime: 2021-04-25 15:53:12
+ * @LastEditTime: 2021-04-29 10:17:24
  * @LastEditors: yuta
  */
 import React, { useRef } from "react";
@@ -52,7 +52,7 @@ const LoginScreen: React.FC = ({ navigation }) => {
           multiline={false}
           returnKeyType="next"
           clearButtonMode="while-editing"
-          value={account.username}
+          value={account?.username}
           onChangeText={(text) => setAccount({ ...account, username: text })}
           onSubmitEditing={(event) => {
             inputPasswordRef?.current?.focus();
@@ -71,7 +71,7 @@ const LoginScreen: React.FC = ({ navigation }) => {
           multiline={false}
           returnKeyType="next"
           clearButtonMode="while-editing"
-          value={account.pwd}
+          value={account?.pwd}
           onChangeText={(text) => setAccount({ ...account, pwd: text })}
         />
       </View>

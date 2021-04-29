@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-26 10:09:52
- * @LastEditTime: 2021-04-26 10:58:04
+ * @LastEditTime: 2021-04-29 10:16:02
  * @LastEditors: yuta
  */
 import React from "react";
@@ -13,16 +13,17 @@ import {
 } from "@react-navigation/stack";
 import MainStack from "./MainStack";
 import LoginStack from "./LoginStack";
-import dataStorage from "../misc/data-storage";
+import { useRecoilValue } from "recoil";
+import { tokenKey } from "../recoil";
 
 const RootStack = createStackNavigator();
 
 const AppNavigation = () => {
+  const hasToken = useRecoilValue(tokenKey);
+
   return (
     <NavigationContainer>
-      <RootStack.Navigator
-        initialRouteName={dataStorage.hasCredential() ? "Home" : "Login"}
-      >
+      <RootStack.Navigator initialRouteName={hasToken ? "Home" : "Login"}>
         <RootStack.Screen
           options={({ route }) => {
             return {

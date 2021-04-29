@@ -1,22 +1,25 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:28:38
- * @LastEditTime: 2021-04-25 16:15:02
+ * @LastEditTime: 2021-04-29 10:23:04
  * @LastEditors: yuta
  */
 import * as React from "react";
 import { Button, Text, View, TouchableOpacity } from "react-native";
 import Modal from "react-native-modal";
-import { useRecoilState } from "recoil";
-import { localeState } from "../recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { accountState, localeState } from "../recoil";
 import Locales from "../misc/locales";
 import dataStorage from "../misc/data-storage";
 
 function SettingsScreen({ navigation }) {
   const [isVisible, setVisible] = React.useState(false);
+  const account = useRecoilValue(accountState);
 
   const onLogOut = async () => {
-    await dataStorage.clearCredential();
+    if (!account?.isRememberPwd) {
+      await dataStorage.clearCredential();
+    }
     navigation.navigate("Login");
   };
 
@@ -25,7 +28,7 @@ function SettingsScreen({ navigation }) {
   const onChangeLang = async (lang: string) => {
     await dataStorage.saveLanguage(lang);
     setLocale(lang);
-  }
+  };
 
   return (
     <View
@@ -36,7 +39,7 @@ function SettingsScreen({ navigation }) {
         onPress={() => setVisible(true)}
       />
 
-      <Button title={Locales.t("logout")} onPress={onLogOut} />
+      <Button title={Locales.t("Logout")} onPress={onLogOut} />
 
       <Modal
         isVisible={isVisible}

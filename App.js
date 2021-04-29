@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-25 16:51:31
- * @LastEditTime: 2021-04-26 10:58:46
+ * @LastEditTime: 2021-04-28 18:01:27
  * @LastEditors: yuta
  */
 /*
@@ -19,26 +19,28 @@
  */
 
 import * as React from "react";
+import { Text } from "react-native";
 import "react-native-gesture-handler";
 import { RecoilRoot } from "recoil";
 // import SimpleBugly from "./native/SimpleBugly.js";
-import AppNavigation from './src/navigation'
-
+import AppNavigation from "./src/navigation";
 
 const App = () => {
   // const [, setLocale] = useRecoilState(localeState);
 
   // React.useEffect(() => {
-    // SimpleBugly.testCrash();
-    // Init language
-    //  setLocale(async () => {
-    //    await dataStorage.getLanguage();
-    //  })
+  // SimpleBugly.testCrash();
+  // Init language
+  //  setLocale(async () => {
+  //    await dataStorage.getLanguage();
+  //  })
   // }, []);
 
   return (
     <RecoilRoot>
-      <AppNavigation/>
+      <React.Suspense fallback={<Text>lodaing...</Text>}>
+        <AppNavigation />
+      </React.Suspense>
     </RecoilRoot>
   );
 };
