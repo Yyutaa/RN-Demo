@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:28:38
- * @LastEditTime: 2021-04-29 10:23:04
+ * @LastEditTime: 2021-05-06 17:56:08
  * @LastEditors: yuta
  */
 import * as React from "react";
@@ -29,6 +29,8 @@ function SettingsScreen({ navigation }) {
     await dataStorage.saveLanguage(lang);
     setLocale(lang);
   };
+
+  const supportLanguage = ["zh_CN", "en_US"];
 
   return (
     <View
@@ -64,31 +66,22 @@ function SettingsScreen({ navigation }) {
             bottom: 12,
           }}
         >
-          <TouchableOpacity
-            onPress={() => onChangeLang("zh_CN")}
-            style={{
-              width: "100%",
-              flex: 1,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text>{Locales.t("Chinese")}</Text>
-          </TouchableOpacity>
-
-          <View style={{ width: "100%", height: 1, backgroundColor: "gray" }} />
-
-          <TouchableOpacity
-            onPress={() => onChangeLang("en_US")}
-            style={{
-              width: "100%",
-              flex: 1,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Text>{Locales.t("English")}</Text>
-          </TouchableOpacity>
+          {supportLanguage?.map((lang) => {
+            return (
+              <TouchableOpacity
+                key={lang}
+                onPress={() => onChangeLang(lang)}
+                style={{
+                  width: "100%",
+                  flex: 1,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Text>{Locales.t(lang)}</Text>
+              </TouchableOpacity>
+            );
+          })}
         </View>
       </Modal>
     </View>
