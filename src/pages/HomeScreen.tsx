@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:27:47
- * @LastEditTime: 2021-04-29 09:55:12
+ * @LastEditTime: 2021-05-06 18:20:43
  * @LastEditors: yuta
  */
 import * as React from "react";
@@ -20,13 +20,17 @@ function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       {/* TODO:文案变量优化 */}
-      {/* <Text style={{ marginVertical: 24 }}>{Locales.t("Hello %1, welcome to here!", account.username)}</Text> */}
       <Text style={{ marginVertical: 24 }}>
-        Hello {account?.username ?? "--"}, welcome to here!
+        {Locales.t("Hello %1, welcome to here!", account.username)}
       </Text>
+      {/* <Text style={{ marginVertical: 24 }}>
+        Hello {account?.username ?? "--"}, welcome to here!
+      </Text> */}
 
-      {/* <Button title={Locales.t("启用Bugly")} onPress={() => SimpleBugly?.init()} /> */}
-      <Button title="启用Bugly" onPress={() => SimpleBugly?.init()} />
+      <Button
+        title={Locales.t("enable bugly")}
+        onPress={() => SimpleBugly?.init()}
+      />
 
       <RNTCustomView
         style={{
