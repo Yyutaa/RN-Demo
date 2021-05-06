@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-26 10:10:34
- * @LastEditTime: 2021-04-26 10:39:13
+ * @LastEditTime: 2021-05-06 18:44:10
  * @LastEditors: yuta
  */
 import React from "react";
@@ -12,7 +12,7 @@ import {
 } from "@react-navigation/stack";
 import HomeScreen from "../pages/HomeScreen";
 import SettingScreen from "../pages/SettingScreen";
-import TabScreen from './TabStack'
+import TabScreen from "./TabStack";
 
 const Stack = createStackNavigator();
 

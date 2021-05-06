@@ -1,27 +1,27 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-21 11:35:15
- * @LastEditTime: 2021-04-21 17:55:10
+ * @LastEditTime: 2021-05-06 18:45:37
  * @LastEditors: yuta
  */
-import {NativeModules} from 'react-native';
+import { NativeModules } from "react-native";
 
 const RNSimpleBugly = NativeModules.SimpleBugly;
 
 export default class SimpleBugly {
-  static Appid = '2d3b0d102b';
+  static Appid = "2d3b0d102b";
 
   static init = async () => {
     try {
       await RNSimpleBugly?.init(this.Appid);
-      console.log('【Bugly】init success! ');
+      console.log("【Bugly】init success! ");
     } catch (e) {
-      console.log('【Bugly】init fail:', e);
+      console.log("【Bugly】init fail:", e);
     }
   };
 
   static testCrash = () => {
     // RNSimpleBugly?.testCrash();
-    console.log('【Test Crash!】');
+    console.log("【Test Crash!】");
   };
 }

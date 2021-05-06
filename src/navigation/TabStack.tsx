@@ -19,9 +19,9 @@ export const Screens = {
 const TabStack = () => {
   return (
     <Stack.Navigator>
-      {Object.keys(Screens).map(screen => {
+      {Object.keys(Screens).map((screen) => {
         return (
-          <Stack.Screen 
+          <Stack.Screen
             key={screen}
             component={Screens[screen].component}
             name={screen}
@@ -29,7 +29,7 @@ const TabStack = () => {
         );
       })}
     </Stack.Navigator>
-  )
+  );
 };
 
 export default TabStack;

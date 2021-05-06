@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-26 10:46:29
- * @LastEditTime: 2021-04-26 10:58:25
+ * @LastEditTime: 2021-05-06 18:44:27
  * @LastEditors: yuta
  */
 import React from "react";
@@ -26,7 +26,11 @@ const LoginStack = () => {
         headerBackTitle: "",
       })}
     >
-      <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
+      <Stack.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };

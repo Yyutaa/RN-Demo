@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:28:38
- * @LastEditTime: 2021-05-06 18:35:59
+ * @LastEditTime: 2021-05-06 18:44:17
  * @LastEditors: yuta
  */
 import * as React from "react";
@@ -81,9 +81,15 @@ function SettingsScreen({ navigation }) {
                   <Text>{Locales.t(lang)}</Text>
                 </TouchableOpacity>
 
-                {index < supportLanguage.length - 1 &&
-                  <View style={{height: 0.5, borderBottomColor: '#ededed', borderWidth: 1}} />
-                }
+                {index < supportLanguage.length - 1 && (
+                  <View
+                    style={{
+                      height: 0.5,
+                      borderBottomColor: "#ededed",
+                      borderWidth: 1,
+                    }}
+                  />
+                )}
               </>
             );
           })}
