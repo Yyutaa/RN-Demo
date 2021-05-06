@@ -1,7 +1,7 @@
 /*
  * @Author: yuta
  * @Date: 2021-04-17 14:28:38
- * @LastEditTime: 2021-05-06 17:56:08
+ * @LastEditTime: 2021-05-06 18:35:59
  * @LastEditors: yuta
  */
 import * as React from "react";
@@ -66,20 +66,25 @@ function SettingsScreen({ navigation }) {
             bottom: 12,
           }}
         >
-          {supportLanguage?.map((lang) => {
+          {supportLanguage?.map((lang, index) => {
             return (
-              <TouchableOpacity
-                key={lang}
-                onPress={() => onChangeLang(lang)}
-                style={{
-                  width: "100%",
-                  flex: 1,
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Text>{Locales.t(lang)}</Text>
-              </TouchableOpacity>
+              <>
+                <TouchableOpacity
+                  onPress={() => onChangeLang(lang)}
+                  style={{
+                    width: "100%",
+                    flex: 1,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Text>{Locales.t(lang)}</Text>
+                </TouchableOpacity>
+
+                {index < supportLanguage.length - 1 &&
+                  <View style={{height: 0.5, borderBottomColor: '#ededed', borderWidth: 1}} />
+                }
+              </>
             );
           })}
         </View>
